@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "87340128502",
+    "firebase_url": "https://townrally-userbase-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "townrally-userbase",
+    "storage_bucket": "townrally-userbase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87340128502:android:c4096aaf2190a8b103f4d7",
+        "android_client_info": {
+          "package_name": "com.Tokele.TownRallyUI"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87340128502-eh9u6ctlfbgbk0tjoe7bj1m3305318k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZtDvKrSEU7jCS1bzaGEalRX-NGELRAxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87340128502-eh9u6ctlfbgbk0tjoe7bj1m3305318k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
