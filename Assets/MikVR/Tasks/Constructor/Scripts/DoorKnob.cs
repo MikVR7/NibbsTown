@@ -10,7 +10,7 @@ namespace Constructor
         private Vector3 initialTouchPosition;
         
         [SerializeField] private Transform tDoorKnob = null;
-        [SerializeField] private Transform tKnob = null;
+        [SerializeField] private Transform tKnob = null; 
         private Vector3 initialKnobPosition = Vector3.zero;
         [SerializeField] private bool isTouched = false;
         private float offsetX = 0f;
@@ -36,7 +36,11 @@ namespace Constructor
                 if (touch.phase == TouchPhase.Began && IsTouchingThisObject(inputPos))
                 {
                     initialTouchPosition = inputPos;
-                    VarOut_CountPullingKnobs.Add(this.initialKnobPosition);
+                    if (!VarOut_CountPullingKnobs.Contains(this.initialKnobPosition))
+                    {
+                        VarOut_CountPullingKnobs.Add(this.initialKnobPosition);
+                        this.isTouched = true;
+                    }
                     startXPos = this.tDoorKnob.localPosition.x;
                 }
 
@@ -45,12 +49,19 @@ namespace Constructor
                     MoveChildObject(inputPos);
                 }
             }
-            else if (Input.GetMouseButtonDown(0))
+            else if(isTouched)
+            {
+                this.isTouched = false;
+                VarOut_CountPullingKnobs.Remove(this.initialKnobPosition);
+            }
+
+            if (Input.GetMouseButtonDown(0))
             {
                 inputPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (IsTouchingThisObject(inputPos))
                 {
                     initialTouchPosition = inputPos;
+                    this.isTouched = true;
                     VarOut_CountPullingKnobs.Add(this.initialKnobPosition);
                     startXPos = this.tDoorKnob.localPosition.x;
                 }
@@ -70,8 +81,7 @@ namespace Constructor
         private bool IsTouchingThisObject(Vector3 inputPosition)
         {
             RaycastHit2D hit = Physics2D.Raycast(inputPosition, Vector2.zero);
-            this.isTouched = hit.collider != null && hit.collider.transform == tKnob;
-            return isTouched;
+            return hit.collider != null && hit.collider.transform == tKnob;
         }
 
         private void MoveChildObject(Vector3 inputPosition)
