@@ -11,7 +11,7 @@ namespace NibbsTown
     internal class DatabaseHandler
     {
         private static readonly string API_KEY = "AIzaSyAZtDvKrSEU7jCS1bzaGEalRX-NGELRAxQ";
-        private static readonly string PROJECT_ID = "townrally-userbase"; // You can find this in your Firebase project settings
+        private static readonly string PROJECT_ID = "townrally-userbase";
         private static readonly string DATABASE_URL = "https://townrally-userbase-default-rtdb.europe-west1.firebasedatabase.app/";
         private static readonly string APP_ID = "1:87340128502:android:c4096aaf2190a8b103f4d7";
         private static readonly string STORAGE_BUCKET = "townrally-userbase.appspot.com";// "com.Tokele.TownRallyUI";
