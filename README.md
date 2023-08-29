@@ -21,7 +21,7 @@ Under Assets/MikVR/NibbsTown is the main NibbsTown project. It consists of
 - Loading screen
 - Login screen (very rudimentary - just enter your name)
 - Rally selection (currently there are 3 rallies - "Zauberwald" is the main development candidate)
-- Map (the map system is built upon the "Online Maps 3" package)
+- Map (the map system is built upon the "Online Maps v3" package)
 - Info screen (can contain Text and Pictures loaded from the database
 
 ## EventSystem
@@ -39,7 +39,7 @@ A classical puzzle game
 2D physically based game - under development, but can be tested already - haven't figured out the rules yet.
 
 ## Map
-Map shows the position of the player and the stations of the rally. The active stations are animated. In editor mode there is a gui that lets you move around the map. If you build to mobile you have to be at the required gps position to complete a station. Map system is based on Online Maps 3.
+Map shows the position of the player and the stations of the rally. The active stations are animated. In editor mode there is a gui that lets you move around the map. If you build to mobile you have to be at the required gps position to complete a station. Map system is based on Online Maps v3.
 
 ## Create your own Tour
 If you want to create your own tour, or see how it's built look into RallyCreator.cs
