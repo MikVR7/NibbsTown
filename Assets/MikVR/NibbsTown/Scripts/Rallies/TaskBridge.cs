@@ -1,5 +1,8 @@
 using ClozeText;
+using Newtonsoft.Json;
 using PicturePuzzle;
+using RightOrWrong;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -57,6 +60,10 @@ namespace NibbsTown
                     this.goTask.GetComponent<PicturePuzzleMain>().InitPuzzle();
                     PicturePuzzleMain.EventOut_PuzzleFinished.AddListener(TaskFinished);
                     PicturePuzzleMain.EventIn_StartPuzzle.Invoke(taskData);
+                    break;
+                case RallyTask.Type.Task_RightOrWrong:
+                    List<Fact> facts = JsonConvert.DeserializeObject<List<Fact>>(taskData);
+                    this.goTask.GetComponent<RightOrWrongMain>().StartRightOrWrong(facts, TaskFinished);
                     break;
             }   
         }

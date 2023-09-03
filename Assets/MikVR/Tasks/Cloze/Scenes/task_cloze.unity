@@ -517,8 +517,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2129567432}
   m_HandleRect: {fileID: 2129567431}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -850,8 +850,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319328764}
   m_HandleRect: {fileID: 1319328763}
   m_Direction: 2
-  m_Value: 0.9999995
-  m_Size: 0.8661036
+  m_Value: 0.99999905
+  m_Size: 0.93590945
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goTask: {fileID: 1672146061}
-  prefabEventSystem: {fileID: 9055886706018628721, guid: ef2cdac994eb82c48b199ad631781c18,
+  prefabEventSystem: {fileID: 9055886706018628721, guid: 7809a89a77dca7240bd937c432f0f053,
     type: 3}
   myAudioListener: {fileID: 564705923}
   myCamera: {fileID: 564705924}

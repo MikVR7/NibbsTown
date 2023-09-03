@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/MikVR/NibbsTown/Scenes/main_menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/MikVR/Tasks/Cloze/Scenes/task_cloze.unity
     guid: b76d6699c0f27984e9364f7c7f782bdd
   - enabled: 0
     path: Assets/MikVR/Tasks/PicturePuzzle/Scenes/task_picturepuzzle.unity
     guid: 554207a31e6629c46bd3634bb737b5a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/MikVR/Tasks/Constructor/Scenes/task_constructor.unity
     guid: 814fe7d2c2c969e4ba89bb3aad6c45b7
+  - enabled: 0
+    path: Assets/MikVR/Tasks/RightOrWrong/Scenes/task_rightorwrong.unity
+    guid: b3d3dba6ff6c37b4fbf0beea49ec00d5
   m_configObjects: {}

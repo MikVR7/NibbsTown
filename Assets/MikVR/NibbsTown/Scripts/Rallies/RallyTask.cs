@@ -12,6 +12,7 @@ namespace NibbsTown
             InfoScreen = 1,
             Task_Cloze = 100,
             Task_PicturePuzzle = 101,
+            Task_RightOrWrong = 102,
         }
 
         //[JsonIgnore] public string StationID { get; set; }
