@@ -27,8 +27,10 @@ namespace WordSearchUI
         {
             if (SceneManager.sceneCount <= 1)
             {
-                List<string> words = new List<string> { "HELLO", "WORLD", "UNITY", "PUZZLE", "SEARCH", "MATRIX", "GAMES", "ENGINE", "SCRIPT", "SHADER" };
-                CreateWordSearch(words, 7, 8, 6);
+                //List<string> words = new List<string> { "HELLO", "WORLD", "UNITY", "PUZZLE", "SEARCH", "MATRIX", "GAMES", "ENGINE", "SCRIPT", "SHADER" };
+
+                List<string> words = new List<string> { "CODE", "GAME", "BYTE", "LOOP", "MESH", "SHAD", "UNIT", "PLAY", "GRID", "VERT" };
+                CreateWordSearch(words, 5, 5, 3);
             }
         }
 
@@ -36,6 +38,7 @@ namespace WordSearchUI
         {
             char[,] matrix = this.wordMatrixGenerator.GenerateWordSearchMatrix(words, matrixWidth, matrixHeight, wordsCountInMatrix);
             List<string> wordsInMatrix = this.wordMatrixGenerator.GetGeneratedWordsList();
+            Debug.Log("GENERATED MATRIX: " + matrix.GetLength(0) + " " + matrix.GetLength(1) + wordsInMatrix.Count);
             string searched = string.Join(", ", wordsInMatrix);
             this.tmpSearchedWords.text = TXT_SEARCHED_WORDS.Replace("&1", searched);
             this.wordsMatrixUI.CreateWordsMatrix(matrix);
