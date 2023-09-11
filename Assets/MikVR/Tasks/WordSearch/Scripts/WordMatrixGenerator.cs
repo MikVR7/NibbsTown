@@ -10,7 +10,7 @@ namespace WordSearchUI
         private char[,] matrix;
         private List<string> directions = new List<string> { "R", "L", "D", "U", "DR", "DL", "UR", "UL" };
         private List<string> words = new List<string>();
-        
+
         internal char[,] GenerateWordSearchMatrix(List<string> words, int width, int height, int wordsInMatrix)
         {
             this.width = width;
@@ -34,7 +34,9 @@ namespace WordSearchUI
             foreach (string word in selectedWords)
             {
                 bool placed = false;
-                while (!placed)
+                int trials = 100;  // Adjust this value based on your needs
+
+                while (!placed && trials > 0)
                 {
                     string direction = directions[UnityEngine.Random.Range(0, directions.Count)];
                     int row = UnityEngine.Random.Range(0, height);
@@ -45,6 +47,15 @@ namespace WordSearchUI
                         PlaceWord(word, row, col, direction);
                         placed = true;
                     }
+
+                    trials--;
+                }
+
+                if (!placed)
+                {
+                    // The word couldn't be placed after 100 trials, so we skip this word.
+                    continue;
+                    // Option 2: Reset the entire matrix and start over (more complex)
                 }
             }
 
@@ -62,6 +73,7 @@ namespace WordSearchUI
 
             return matrix;
         }
+
 
         internal List<string> GetGeneratedWordsList() {
             return this.words;
